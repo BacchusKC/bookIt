@@ -1,10 +1,10 @@
 import React from "react";
+import './SearchForm.css'
 
 function SearchForm(props) {
   return (
     <form>
-      <div className="form-group">
-        <label htmlFor="search">Search:</label>
+      <div className="formBox">
         <input
           onChange={props.handleInputChange}
           value={props.value}

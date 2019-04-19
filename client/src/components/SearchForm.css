@@ -1,0 +1,6 @@
+.formBox {
+    max-width: 1000px;
+    margin: 30px auto;
+    border: 2px solid black;
+    padding: 20px;
+}
