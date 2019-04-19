@@ -13,6 +13,7 @@
     "heroku-postbuild": "npm run build"
   },
   "author": "",
+  "root": "build/",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
