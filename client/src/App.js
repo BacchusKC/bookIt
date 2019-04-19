@@ -5,19 +5,19 @@ import Saved from './components/Saved';
 import Home from './components/Home';
 import Header from './components/Header';
 // import Footer from './components/Footer';
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Switch>
+        <Router>
+          <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/saved" component={Saved} />
-          <Route component={Home} />
-        </Switch>
+        </Router>
         {/* <Footer /> */}
       </div>
     );
