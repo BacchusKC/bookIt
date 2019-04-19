@@ -11,7 +11,7 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks"
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+// app.use(express.static("public"));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
