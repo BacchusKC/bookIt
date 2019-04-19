@@ -1,0 +1,33 @@
+.button {
+    background-color: green;  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+}
+.button:hover {
+    text-decoration: none;
+    color: initial;
+}
+.deleteButton {
+    background-color: red;  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+}
+.deleteButton:hover {
+    color: black;
+}
+.bookDiv {
+    border: 2px solid black;
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto;
+    min-height: 344px;
+}
+img {
+    float: left;
+    height: 300px;
+    margin: 20px;
+}

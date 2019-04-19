@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import API from "../utils/API";
 import SearchForm from "./SearchForm";
 import DisplayResults from "./DisplayResults";
@@ -37,18 +36,17 @@ class Search extends Component {
             authors: resultToSave.volumeInfo.authors.join(", "),
             description: resultToSave.volumeInfo.description,
             image: resultToSave.volumeInfo.imageLinks.thumbnail,
-            saleLink: resultToSave.saleInfo.buyLink,
+            saleLink: resultToSave.volumeInfo.infoLink,
             id: resultToSave.id
-        }
-        console.log(resultToSave)
-        axios.post("/saveBook", bookToSave).then((result) => {
-            console.log(result)
-        })
+        };
+        axios.post("api/books/", bookToSave).then((result) => {
+            if (result.data) {
+                alert(result.data.title + " Saved");
+            };
+            }).catch(err => alert("Already Saved"))
     };
 
     render() {
-        const res = this.state.results;
-        console.log(res);
         return (
             <div>
                 <SearchForm
@@ -57,7 +55,7 @@ class Search extends Component {
                     handleFormSubmit={this.handleFormSubmit}
                 />
                 {   
-                    res.map((book, index) => {
+                    this.state.results.map((book, index) => {
                         return (
                         <DisplayResults
                             key={book.id}
@@ -67,15 +65,15 @@ class Search extends Component {
                             authors={book.volumeInfo.authors.join(", ")}
                             image={book.volumeInfo.imageLinks.thumbnail}
                             text={book.volumeInfo.description}
-                            saleLink={book.saleInfo.buyLink}
+                            saleLink={book.volumeInfo.infoLink}
                             save={this.saveBook}
                         />
                         );
                     })
                 }
             </div>
-        )
-    }
+        );
+    };
 };
 
 export default Search;

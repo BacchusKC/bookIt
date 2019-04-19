@@ -1,0 +1,21 @@
+.header {
+    height: 190px;
+    width: 100%;
+    position: relative;
+    background-color: oldlace;
+    background-image: url("./images/books.jpg");
+    background-size: contain;
+}
+.navbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: sandybrown!important;
+    background-image: url("./images/wood.jpg")!important;
+}
+.navbar-brand {
+    color: white!important;
+}
+.nav-link {
+    color: white!important;
+}
