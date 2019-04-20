@@ -2,18 +2,24 @@ import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom'
 import bookIcon from './images/bookIcon.png';
+import { Navbar, Nav } from 'react-bootstrap';
 
 function Header(props) {
     return (
         <div className="header">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <Navbar bg="light" expand="sm">
                 <Link to="/">
-                   <img className="image" src={bookIcon} />
+                    <img alt="" className="image" src={bookIcon} />
                 </Link>
                 <Link to="/" className="navbar-brand">Book It</Link>
-                <Link to="/search" className="nav-link">Search</Link>
-                <Link to="/saved" className="nav-link">Saved</Link>
-            </nav>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Link to="/search" className="nav-link">Search</Link>
+                        <Link to="/saved" className="nav-link">Saved</Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
     );
 };
