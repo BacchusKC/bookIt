@@ -5,13 +5,32 @@
     margin: 30px auto;
     min-height: 344px;
     padding: 7px;
+    position: relative;
+    max-height: 500px;
 }
 img {
     float: left;
-    height: 300px;
+    height: 100%!important;
+    width: auto!important;
     margin: 20px;
 }
 .title {
     min-width: 500px;
     display: flex;
+}
+.description {
+    overflow: hidden;
+}
+.media-body {
+    max-height: 480px;
+    overflow: hidden;
+}
+.viewButton {
+    position: absolute;
+    bottom: 7px;
+}
+.saveButton {
+    position: absolute;
+    bottom: 7px;
+    left: 65px;
 }
