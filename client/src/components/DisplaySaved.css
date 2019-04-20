@@ -8,6 +8,7 @@
 .button:hover {
     text-decoration: none;
     color: initial;
+    cursor: pointer;
 }
 .deleteButton {
     background-color: red;  
@@ -21,6 +22,7 @@
 }
 .deleteButton:hover {
     color: black;
+    cursor: pointer;
 }
 .description {
     overflow: hidden;
@@ -48,4 +50,7 @@ img {
 .viewButton {
     position: absolute;
     bottom: 7px;
+}
+.viewButton:hover {
+    cursor: pointer;
 }
